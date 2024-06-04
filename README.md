@@ -4,4 +4,8 @@
 
 ## Português
 
-<p>Sistema bancário feito usando Python, tendo as opções de realização de saque, depósito e visualização de extrato</p>
+<p>Sistema bancário feito usando Python, permitindo a realização de saque, depósito e visualização de extrato</p>
+
+## English
+
+<p>Banking system made using Python, allowing withdrawals, deposits and statement viewing</p>
