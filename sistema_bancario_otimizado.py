@@ -23,7 +23,7 @@ def menu():
 def deposito(saldo, valor, extrato, /):
     if (valor > 0):
         saldo += valor
-        extrato += f"Você depositou: R${deposito:,.2f}\n"
+        extrato += f"Você depositou: R${valor:,.2f}\n"
         print("\n=== Depósito realizado com sucesso! ===")
 
     else:
@@ -39,9 +39,6 @@ def saque(*, saldo, valor, extrato, limite, numero_de_saques, limite_saque):
         print ("\n@@@ Limite de saques foi excedido @@@")
 
     else:
-        print ("\n","Saque".center(40, "="))
-        valor = float(input("\nDigite o valor a ser sacado: "))
-
         if (valor > saldo):
             print ("\n@@@ Saldo insuficiente para saque! @@@")
                 
@@ -50,7 +47,7 @@ def saque(*, saldo, valor, extrato, limite, numero_de_saques, limite_saque):
 
         else:
             numero_de_saques += 1
-            extrato += f"Saque feito de: R${saque:,.2f}\n"
+            extrato += f"Saque feito de: R${valor:,.2f}\n"
             print ("\n === Saque efetuado com sucesso! ===")
             saldo = saldo - valor
     
@@ -137,7 +134,7 @@ def main():
         elif (opcao == "s"):    
             print ("\n","Saque".center(40, "="))
 
-            valor = float(input("Digite o valor a ser depositado: "))
+            valor = float(input("Digite o valor a ser sacado: "))
             saque(
                 saldo = saldo,
                 valor = valor,
